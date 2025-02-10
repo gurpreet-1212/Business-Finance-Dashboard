@@ -38,14 +38,21 @@ graph TD
     T -- Yes --> U[Create Final DataFrame];
 
     %% --- FINAL STEPS --- %%
-    subgraph "Final Data & Calculations"
-        U --> V[Combine data & calculate metrics];
-        V --> W[Handle Nulls & Adjustments];
-        W --> X[Create Final Business Finance DataFrame];
-    end
+    U -->|Combine costs for profit analysis| V[Create Comprehensive Financials DataFrame];
+    V --> W[Include Customer Group & Channel Spends];
+    W --> X[Visibility Metrics Incorporated];
+    X --> Y[Use Pivot Tables for Maximum Values];
+    Y -->|Resolve duplicates & ensure latest values| Z[Create Pivoted DataFrame];
+    Z --> A1[Pass Data if Duplicates Found];
+    A1 --> B1[Merge Processed File with Master Data];
+    B1 --> C1[Calculate Marketing Spends & Other Financial Factors];
+    C1 -->|Derive KPIs and ratios| D1[Calculate Factors];
+    D1 -->|Finalize calculations| E1[Create Final Processed DataFrame];
+    E1 --> F1[Handle Null Values];
+    F1 --> G1[Calculate Key Percentages];
+    G1 --> H1[Merge Freight Lines];
+    H1 -->|Ensure complete financial overview| I1[Create Final Business Finance DataFrame];
 
-    subgraph "Dashboard & Reporting"
-        X --> Y[Final Financial & Business Insights Dashboard];
-        Y --> Z[Generate Reports & Visualizations];
-        Z --> A1[End: Dashboard Ready for Analysis];
-    end
+    I1 --> J1[Final Financial & Business Insights Dashboard];
+    J1 --> K1[Generate Reports & Visualizations];
+    K1 --> L1[End: Dashboard Ready for Analysis];
